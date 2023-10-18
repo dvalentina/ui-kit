@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { ICard } from '.';
 
@@ -16,4 +16,7 @@ export const Card = styled.div<ICard>`
         return 'none';
     }
   }};
+  ${({ width }) => css`
+    width: ${width};
+  `}
 `;
