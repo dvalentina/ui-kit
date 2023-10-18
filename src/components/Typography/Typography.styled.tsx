@@ -2,12 +2,28 @@ import styled, { css } from 'styled-components';
 
 interface ITypography {
   $fontStyle?: 'medium' | 'bold' | 'italic';
+  $mb?: string;
+  $mt?: string;
+  $mr?: string;
+  $ml?: string;
 }
 
 const TypographyBase = css<ITypography>`
   color: #2c2738;
   font-style: ${({ $fontStyle }) => ($fontStyle === 'italic' ? 'italic' : 'normal')};
   font-weight: ${({ $fontStyle }) => ($fontStyle === 'bold' ? '700' : '500')};
+  ${({ $mt }) => css`
+    margin-top: ${$mt};
+  `};
+  ${({ $mr }) => css`
+    margin-right: ${$mr};
+  `};
+  ${({ $mb }) => css`
+    margin-bottom: ${$mb};
+  `};
+  ${({ $ml }) => css`
+    margin-left: ${$ml};
+  `};
 `;
 
 export const HeadingH1 = styled.h1<ITypography>`
