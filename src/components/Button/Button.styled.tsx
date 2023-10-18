@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { IButton } from './Button';
+import { IButton } from '.';
 
 export const Button = styled.button<IButton>`
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
