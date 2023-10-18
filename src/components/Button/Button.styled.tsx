@@ -14,57 +14,53 @@ export const Button = styled.button<IButton>`
         return '15px 68px';
     }
   }};
-  background-color: ${({ primary, disabled }) => {
+  background-color: ${({ primary, disabled, theme }) => {
     if (disabled) {
-      return '#EBF4F8';
+      return theme.tint;
     }
 
     if (primary) {
-      return '#2b78e4';
+      return theme.accent;
     }
 
-    return '#FFF';
+    return theme.bright;
   }};
-  border: ${({ primary, bordered, disabled, error }) => {
+  border: ${({ primary, bordered, disabled, error, theme }) => {
     if (disabled) {
-      return '1px solid #EBF4F8';
+      return `1px solid ${theme.tint}`;
     }
 
     if (primary) {
-      return '1px solid #2b78e4';
+      return `1px solid ${theme.accent}`;
     }
 
     if (error) {
-      return '1px solid #FF7171';
+      return `1px solid ${theme.error}`;
     }
 
     if (bordered) {
-      return '1px solid #2b78e4';
+      return `1px solid ${theme.accent}`;
     }
 
-    if (bordered) {
-      return '1px solid #fff';
-    }
-
-    return '1px solid transparent';
+    return `1px solid ${theme.bright}`;
   }};
   border-radius: 6px;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  color: ${({ primary, disabled, error }) => {
+  color: ${({ primary, disabled, error, theme }) => {
     if (disabled) {
-      return '#B2B8BE';
+      return theme.shade;
     }
 
     if (primary) {
-      return '#fff';
+      return theme.bright;
     }
 
     if (error) {
-      return '#FF7171';
+      return theme.error;
     }
 
-    return '#2b78e4';
+    return theme.accent;
   }};
   text-align: center;
   font-family: Inter;

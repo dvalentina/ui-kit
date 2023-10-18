@@ -4,7 +4,7 @@ import { ICard } from '.';
 
 export const Card = styled.div<ICard>`
   border-radius: 16px;
-  background: #fff;
+  background: ${({ theme }) => theme.bright};
   position: relative;
   padding: ${({ size }) => {
     switch (size) {

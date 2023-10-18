@@ -3,7 +3,7 @@ import type { Preview } from "@storybook/react";
 
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../src/styles/GlobalStyle';
-import { darkTheme, lightTheme } from '../src/styles/Themes'
+import { darkTheme, lightTheme, colors } from '../src/styles/Themes'
 
 const withTheme = (Story, context) => {
   const { theme } = context.parameters;
@@ -26,11 +26,11 @@ const preview: Preview = {
       },
     },
     backgrounds: {
-      default: 'bluegrey',
+      default: 'tint',
       values: [
         {
-          name: 'bluegrey',
-          value: '#EBF4F8',
+          name: 'tint',
+          value: colors.tint,
         },
       ],
     },
