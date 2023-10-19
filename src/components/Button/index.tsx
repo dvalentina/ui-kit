@@ -31,14 +31,26 @@ export interface IButton {
    * Does button have an error state?
    */
   error?: boolean;
+  /**
+   * Allows to use styled-components
+   */
+  className?: string;
 }
 
 /**
  * Primary UI component for user interaction
  */
-function Button({ onClick, bordered, primary, disabled, size, label, error }: IButton) {
+function Button({ onClick, bordered, primary, disabled, size, label, error, className }: IButton) {
   return (
-    <StyledButton onClick={onClick} bordered={bordered} primary={primary} disabled={disabled} size={size} error={error}>
+    <StyledButton
+      onClick={onClick}
+      bordered={bordered}
+      primary={primary}
+      disabled={disabled}
+      size={size}
+      error={error}
+      className={className}
+    >
       {label}
     </StyledButton>
   );

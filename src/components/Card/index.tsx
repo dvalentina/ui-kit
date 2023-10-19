@@ -15,11 +15,15 @@ export interface ICard {
    * The width of the card
    */
   width?: string;
+  /**
+   * Allows to use styled-components
+   */
+  className?: string;
 }
 
-function Card({ size, width, children }: ICard) {
+function Card({ size, width, children, className }: ICard) {
   return (
-    <StyledCard size={size} width={width}>
+    <StyledCard size={size} width={width} className={className}>
       {children}
     </StyledCard>
   );
