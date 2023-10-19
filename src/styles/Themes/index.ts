@@ -9,6 +9,9 @@ export const colors = {
   bright: '#FFFFFF',
   shade: '#B2B8BE',
   tint: '#EBF4F8',
+  text: '#2c2738',
+  tertiary: '#D8D8D8',
+  offwhite: '#FCFDFE',
 };
 
 export const lightTheme = {

@@ -9,7 +9,7 @@ interface ITypography {
 }
 
 const TypographyBase = css<ITypography>`
-  color: #2c2738;
+  color: ${({ theme }) => theme.text};
   font-style: ${({ $fontStyle }) => ($fontStyle === 'italic' ? 'italic' : 'normal')};
   font-weight: ${({ $fontStyle }) => ($fontStyle === 'bold' ? '700' : '500')};
   ${({ $mt }) => css`
