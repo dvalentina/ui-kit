@@ -12,6 +12,7 @@ export const colors = {
   text: '#2c2738',
   tertiary: '#D8D8D8',
   offwhite: '#FCFDFE',
+  divider: '#D9D9D9',
 };
 
 export const lightTheme = {
